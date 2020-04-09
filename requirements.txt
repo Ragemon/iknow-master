@@ -38,7 +38,7 @@ six==1.12.0
 sqlparse==0.3.0
 tinycss2==0.6.1
 tqdm==4.28.1
-urllib3==1.24.1
+urllib3==1.24.2
 virtualenv==16.2.0
 virtualenvwrapper-win==1.2.5
 WeasyPrint==44
