@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=MetaEditor 5
+Exec=env WINEPREFIX="/home/cj/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/cj/.wine/dosdevices/c:/users/Public/Desktop/MetaEditor\\ 5.lnk
+Type=Application
+StartupNotify=true
+Path=/home/cj/.wine/dosdevices/c:/Program Files/MetaTrader 5
+Icon=B7B7_metaeditor64.0
+StartupWMClass=metaeditor64.exe

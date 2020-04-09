@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+  {% include 'blog/jumbotrom.html' %}
+      <div class="row">
+
+        <div class="col-sm-7 col-sm-offset-1 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">{{ object.title }}</h2>
+            <p class="blog-post-meta">{{ object.created }} by <a href="." id="author">{{ object.author }}</a></p>
+
+            <p>{{ object.content|safe }}</p>
+            <hr>
+
+          </div><!-- /.blog-post -->
+
+
+        </div><!-- /.blog-main -->
+
+        {% include 'blog/sidebar.html' %}
+
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    {% include 'blog/footer.html' %}
+
+{% endblock %}
+
+

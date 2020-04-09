@@ -1,0 +1,21 @@
+#title-post{
+    color: #333;
+    font-size: 30px;
+    font-weight: 30px;
+
+}
+
+#title-post:hover a:link {
+    text-decoration: none!important;
+    border-bottom: .6px solid black;
+}
+
+#blog-title-L {
+	color: red;
+}
+
+#author {
+    text-decoration: none;
+}
+
+

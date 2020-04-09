@@ -1,0 +1,54 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% block title %}{% if object.title %} {{ object.title }} : {% endif %}fullLove {% endblock %}
+    </title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+     <link rel="stylesheet" type="text/css" href="{% static 'blog/css/blog_boot.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style_boot.css' %}">
+    <link rel="icon" type="image/icon" href="{% static '/img/favicon.ico' %}">
+</head>
+
+<body>
+    {% block nav %} {% include 'blog/nav_boot.html' %}{% endblock %}
+    {% block body %}
+
+
+    {% block sidebar %}{% endblock %}
+
+     <footer class="blog-footer">
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+    {% endblock %}
+
+
+
+
+
+
+    <!--<script src="{% static 'js/nav.js' %}"></script>-->
+<!--&lt;!&ndash; Bootstrap core JavaScript &ndash;&gt;-->
+    <!--<script src="{% static 'blog/jquery/jquery.min.js' %}"></script>-->
+    <!--<script src="{% static 'blog/bootstrap/js/bootstrap.bundle.min.js' %}"></script>-->
+    <!--<script src="{% static 'blog/bootstrap/js/bootstrap.bundle.min.js.map' %}"></script>-->
+    <!--<script src="{% static 'blog/bootstrap/js/bootstrap.min.js' %}"></script>-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{% static 'bootstrap/assets/js/vendor/jquery.min.js' %}"><\/script>')</script>
+    <script src="{% static 'blog/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static 'bootstrap/assets/js/ie10-viewport-bug-workaround.js' %}"></script>
+
+
+
+</body>
+
+</html>

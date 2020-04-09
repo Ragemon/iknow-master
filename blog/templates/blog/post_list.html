@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	 <div class="container">
+
+     {% include 'blog/jumbotrom.html' %}
+
+      <div class="row">
+
+        <div class="col-sm-7 col-sm-offset-1 blog-main">
+        {% for obj in object_list %}
+          <div class="blog-post">
+            <h3 class="blog-post-title">
+				<a href="{% url 'blog:article_detail' obj.id obj.slug%}" id="title-post">{{ obj.title }}</a>
+			</h3>
+            <p class="blog-post-meta">
+                {{ obj.created }}
+                {% if obj.author %}
+                    by <a href="." id="author">{{obj.author}}</a>
+                {% endif %}
+            </p>
+
+	<p class="post-content"><!-- div for blog content -->
+		{{ obj.content|truncatewords:105|safe }}
+	</p><!--End of post-content div-->
+
+
+          </div><!-- /.blog-post -->
+            {% endfor %}
+
+
+          {% include 'blog/paginator.html' %}
+
+        </div><!-- /.blog-main -->
+
+    {% include 'blog/sidebar.html' %}
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+
+{% include 'blog/footer.html' %}
+
+
+
+{% endblock %}
